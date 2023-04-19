@@ -13,6 +13,7 @@
     $author = $_POST['author'];
     $userId = $_POST['id'];
     $userPw = $_POST["password"];
+    $userAd = $_POST["address"];
 
     $q = "SELECT * FROM test_table WHERE userId = '$userId'"; //query for check 'id' already exist
     $result = $mysqli -> query($q); //sending a query to mysql
@@ -23,7 +24,7 @@
         exit;
     } else {
         //if 'id' not esist in database
-        $sql = "INSERT INTO `test_table` (title, description, author, created, userId, userPw) VALUES ('about', 'name is', '$author', NOW(), '$userId', '$userPw')"; //sql test!
+        $sql = "INSERT INTO `test_table` (title, description, author, created, userId, userPw, userAd) VALUES ('about', 'name is', '$author', NOW(), '$userId', '$userPw', '$userAd')"; //sql test!
         // $sql = "INSERT INTO test_table WHERE ('author', 'userId', 'userPw') VALUE ($author, $userId, $userPw)";
         mysqli_query($conn,$sql);//
         //$q = "INSERT INTO test_table WHERE (author, userId, userPw) VALUE ($author, $userId, $userPw)"; 

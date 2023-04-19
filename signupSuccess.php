@@ -11,7 +11,7 @@
     <title></title>
   </head>
   <body>
-  	<form action="./login.php" method="POST">
+  	<form action="./login.php">
 	  	<fieldset>
         <input type="submit" value = 'go login'>
       </fieldset>
