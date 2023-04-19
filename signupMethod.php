@@ -4,9 +4,9 @@
 	ini_set("display_errors", 1);
 
     $host = 'localhost';
-    $user = 'test_user'; //Database user name
-    $pw = '1111'; //Database user password
-    $db_name = 'test_db'; //Database name
+    $user = 'test_user'; 
+    $pw = '1111'; 
+    $db_name = 'test_db'; 
     $mysqli = new mysqli($host,$user,$pw,$db_name); //connecting Database
     $conn = mysqli_connect('localhost', 'test_user', '1111', 'test_db');//
 
@@ -16,7 +16,7 @@
     $userAd = $_POST["address"];
 
     $q = "SELECT * FROM test_table WHERE userId = '$userId'"; //query for check 'id' already exist
-    $result = $mysqli -> query($q); //sending a query to mysql
+    $result = $mysqli -> query($q); 
     $row = $result -> fetch_array(MYSQLI_ASSOC); //
     if($row != null){
         //if 'id' already exist in database

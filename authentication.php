@@ -4,10 +4,10 @@
 	ini_set("display_errors", 1);
 
     $host = 'localhost';
-    $user = 'test_user'; //Database user name
-    $pw = '1111'; //Database user password
-    $db_name = 'test_db'; //Database name
-    $mysqli = new mysqli($host,$user,$pw,$db_name); //connecting Database
+    $user = 'test_user'; 
+    $pw = '1111'; 
+    $db_name = 'test_db'; 
+    $mysqli = new mysqli($host,$user,$pw,$db_name); 
     
     $userId = $_POST['id'];
     $userPw = $_POST["password"];
