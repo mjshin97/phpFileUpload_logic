@@ -12,6 +12,9 @@
   <body>
   	<form action="./authentication.php" method="POST">
 	  	<fieldset>
+        <h4>ID:
+	  		    <input type="text" name='id' />
+        </h4>
         <h4>PW:
             <input type="password" name="password"/>
         </h4>

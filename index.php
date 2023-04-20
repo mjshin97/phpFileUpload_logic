@@ -1,5 +1,4 @@
 <?php
-  //about to start here
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);
 ?>
@@ -11,7 +10,7 @@
     <title></title>
   </head>
   <body>
-  	<form action="./loginStep1.php" method="POST">
+  	<form action="./login.php" method="POST">
 	  	<fieldset>
         <input type="submit" value = 'login'>
       </fieldset>
