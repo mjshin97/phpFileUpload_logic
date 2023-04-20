@@ -1,5 +1,5 @@
 <?php
-  //about to start here
+  session_destroy();
 	error_reporting(E_ALL);
 	ini_set("display_errors", 1);
 ?>
@@ -11,12 +11,13 @@
     <title></title>
   </head>
   <body>
-  	<form action="./loginStep1.php" method="POST">
+  	<form action="./identification.php" method="POST">
 	  	<fieldset>
-        <input type="submit" value = 'login'>
+        <h4>ID:
+	  		    <input type="text" name='id' />
+        </h4>
       </fieldset>
+	  		<input type="submit" value="Login"/>
     </form>
-
   </body>
 </html>
-<!-- move to login page -->

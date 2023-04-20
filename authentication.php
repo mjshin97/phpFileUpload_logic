@@ -8,12 +8,10 @@
     $pw = '1111'; 
     $db_name = 'test_db'; 
     $mysqli = new mysqli($host,$user,$pw,$db_name); 
-    
-    $userId = $_POST['id'];
+
     $userPw = $_POST["password"];
 /////////////////////////////////////////////////////////////////////////////////////////variety methods
-    $q = "SELECT * FROM test_table WHERE ((userId = '$userId')
-    AND (userPw = '$userPw'))";
+    $q = "SELECT * FROM test_table WHERE userPw = '$userPw'";
 
     // $q = "SELECT * FROM test_table WHERE (userId = '$userId' AND userPw = '$userPw')";
     // answer : fd' or '1'='1 /////v4
@@ -38,6 +36,6 @@
         header('Location: ./main.php');
         exit;
     } else {
-        echo"Please sign up first.";
+        echo"Wrong password.";
     }
 ?>
