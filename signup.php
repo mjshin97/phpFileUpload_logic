@@ -8,13 +8,10 @@
   <head>
     <meta charset="UTF-8" />
     <title></title>
-    <!--api authentication start-->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=75f2a83ec766b3ac7ea902e40b083956">//Javascript key</script>
-    <!--api authentication done-->
   </head>
   <body>
   	<form action="./signupMethod.php" method="POST">
-	  	<fieldset>
+
             <h4>Name:
               <input type="text" minlength='2' name="author" required/>
             </h4>
@@ -24,25 +21,22 @@
             <h4>PW:
               <input type="password" minlength='2' name="password" required/>
             </h4>
-            <h4>Address:
-              <input type="text" name="address" id="address" readonly>
-              <button type="button" onclick="openAddressSerch()">Serch address</button>
-            </h4>  
-        </fieldset>
+            <p><div class=subject>Address</div>
+              <input class=textform type="text" name="join_address" id="address" onclick="addressSerch();" placeholder="Please write your address." readonly required>
+            <p>  
+        
 	  		<input type="submit" value="Signup"/>
     </form>
-<!--api script start-->
+
+    <!--new function start-->
     <script>
-      function openAddressSerch() {
-        new daum.Postcode({
-          oncomplete: function(data) {
-            var fullAddress = data.address; //move all selected address to variable
-            document.getElementById('address').value = fullAddress; //put the value in address box
-          }
-        }).open();
-      }
+      function addressSerch(){
+        url = "address.php";
+        window.open(url,"address",'width=400,height=400, scrollbars=no,resizable=no');
+      };
     </script>
-    <script type="text/javascript" src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-<!--api scirpt done-->
+    <!--new function done-->
+
+
   </body>
 </html>

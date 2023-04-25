@@ -11,7 +11,7 @@
     
     $userId = $_POST['id'];
     $userPw = $_POST['password'];
-/////////////////////////////////////////////////////////////////////////////////////////variety methods
+    
     $q = "SELECT * FROM test_table WHERE userId='$userId'";
     $result = mysqli_query($conn,$q);
 
@@ -30,3 +30,4 @@
         //login fail by identification
         echo "ID not exist";
     }
+?>
