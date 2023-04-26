@@ -11,7 +11,7 @@
     
     $userId = $_POST['id'];
     $userPw = $_POST["password"];
-/////////////////////////////////////////////////////////////////////////////////////////variety methods
+/////////////////////////////////////////////////////////////////variety methods
     $q = "SELECT * FROM test_table WHERE ((userId = '$userId')
     AND (userPw = '$userPw'))";
 
@@ -28,7 +28,7 @@
     // $q = "SELECT * FROM test_table WHERE userId = '$userId' AND userPw = '$userPw'"; 
     //answer : fd' or '1'='1 answer : fd'# /////v1
 
-/////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
     $result = $mysqli -> query($q);
     $row = $result -> fetch_array(MYSQLI_ASSOC);//
 
