@@ -13,7 +13,7 @@
     $author = $_POST['author'];
     $userId = $_POST['id'];
     $userPw = $_POST["password"];
-    $userAd = $_POST["address"];
+    $userAd = $_POST["join_address"];
 
     $q = "SELECT * FROM test_table WHERE userId = '$userId'"; //query for check 'id' already exist
     $result = $mysqli -> query($q); 
