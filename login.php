@@ -24,10 +24,10 @@
         <div class="text-center">
           <h4>ID:
               <input type="text" name='id' />
-            </h4>
-            <h4>PW:
+          </h4>
+          <h4>PW:
               <input type="password" name="password"/>
-            </h4>
+          </h4>
             <input type="submit" class="btn btn-Primary" value="Login"/>    
       </div>
     </form>
