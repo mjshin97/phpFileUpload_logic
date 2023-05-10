@@ -7,10 +7,32 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php
+        error_reporting(E_ALL);
+        ini_set("display_errors", 1);
+
+        $conn = mysqli_connect("localhost", "test_user", "1111", "test_db");
+
+        $id = $_GET['id'];
+        $id = mysqli_real_escape_string($conn, $id);
+
+        $query = "select * from test_board where id='$id' ";
+        $result = mysqli_query($conn, $query);
+        $data = mysqli_fetch_array($result);
+
+
+    ?>
+
+
+
     <form action="process_create.php" method="POST">
-        <p><input type="text" name="title" placeholder="title"></p>
-        <p><textarea name="description" placeholder="description"></textarea></p>
+        <input type="hidden" name="id" value="<?=$id?>">
+        <p><input type="text" name="title"  value="<?=$data['title']?>"  placeholder="title" ></p>
+        <p><textarea name="description" placeholder="description"><?=$data['description']?></textarea></p>
         <p><input type="submit"></p>
+        <!--please make right forms of creating post--> 
+        
     </form>
 </body>
 </html>

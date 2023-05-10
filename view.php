@@ -31,6 +31,12 @@
         <td><?php echo $data['description'] ?></td>
     </tr>
     </table>
-    <!--  -->
+    <table width=800 border="1" cellpadding=5>
+        <td>
+            <a href="del.php?id=<?=$id?>" onclick="return confirm('are you sure you want to delete this?')">delete</a> 
+            <a href="create.php?id=<?=$id?>">modify</a> 
+        </td>
+    </table>
+    
 </body>
 </html>
