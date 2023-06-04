@@ -13,7 +13,7 @@
         ini_set("display_errors", 1);
 
         $conn = mysqli_connect("localhost", "test_user", "1111", "test_db");
-
+        
         $id = $_GET['id'];
         $id = mysqli_real_escape_string($conn, $id);
 
@@ -21,18 +21,22 @@
         $result = mysqli_query($conn, $query);
         $data = mysqli_fetch_array($result);
 
-
     ?>
 
 
 
     <form action="process_create.php" method="POST">
-        <input type="hidden" name="id" value="<?=$id?>">
-        <p><input type="text" name="title"  value="<?=$data['title']?>"  placeholder="title" ></p>
-        <p><textarea name="description" placeholder="description"><?=$data['description']?></textarea></p>
-        <p><input type="submit"></p>
-        <!--please make right forms of creating post--> 
+        <?php if(isset($_GET['id'])) { ?>
+            <input type="hidden" name="id" value="<?=$id?>">
+            <p><input type="text" name="title"  value="<?=$data['title']?>"  placeholder="title" ></p>
+            <p><textarea name="description" placeholder="description"><?=$data['description']?></textarea></p> 
+            <p><input type="submit"></p>
+        <?php } else { ?>
+            <p><input type="text" name="title"  placeholder="title" ></p>
+            <p><textarea name="description" placeholder="description"></textarea></p> 
+            <p><input type="submit"></p>
+        <?php } ?>
         
     </form>
 </body>
-</html>
+</html> 
